@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background-color: rgb(40 36 64);
+}
+
+.custom-card-background{
+    background-color: #441b37a6;
+    color: #fff;
+    border: #441b37a6;
+}
+
+.video{
+    display: flex;
+    color:rgb(168, 196, 238)
+}
+
+.contenido{
+    margin: 2em;
+}
+
+.logoiro img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+header .logoiro img:hover{
+    transform: scale(1.2);
+}
+
+.navbar{
+    flex-direction:row-reverse;
+    list-style: none;
+    text-decoration: none;
+}
+
+header .navbar a{
+    font-size: 700;
+    color: rgb(168, 196, 238);
+    text-decoration: none;
+}
+
+header .navbar li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header .navbar li a:hover{
+    color: rgb(79, 123, 189);
+}
+
+header .navbar li:hover{
+transform: scale(1.1);
+}
+
+.logoiro{
+    width:50%
+}
+
+.img-thumbnail{
+    height: 20em;
+    object-fit: cover;
+    padding: 1px;
+    transition: all 0.5s;
+}
+
+.img-thumbnail:hover{
+    height: auto;
+    transform: scale(1.01);
+}
+
+.cols{
+    margin-top: 1em;
+}
+
+.embed-responsive-item{
+    padding: 1px;color: #ffffff;
+    height: 20em;
+    object-fit: cover;
+    padding: 1px;
+    transition: all 0.5s;
+}
+.embed-responsive-item:hover{
+    height: auto;
+    transform: scale(1.01);
+}
