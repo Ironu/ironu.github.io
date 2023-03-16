@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from .models import *
+from .forms import *
 
 
-
+#Luego del reverse() puedo escribir entre corchetes la cantidad que quiero que se muestre EJ [:3] En ese caso se mostraran solo 3 datos 
 def index(request):
     artworks = Artwork.objects.all().order_by('fecha_de_creacion').reverse()
     data = {

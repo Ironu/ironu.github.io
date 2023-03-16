@@ -19,5 +19,15 @@ class Artwork(models.Model):
 
     def __str__(self):
         return self.titulo
-    
+
+class Comentarios(models.Model):
+    noticia = models.ForeignKey('Artwork',related_name='Comentarios', on_delete=models.CASCADE)
+    autor =  models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    cuerpo_comentario = models.TextField()
+    creado = models.DateTimeField(default=timezone.now)
+    aprobado = models.BooleanField(default=False)
+
+    def aprobarComentario(self):
+        self.aprobado = True
+        self.save()
 

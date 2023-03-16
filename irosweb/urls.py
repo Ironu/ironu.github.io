@@ -29,6 +29,8 @@ urlpatterns = [
     path('EP/', views.EP, name='EP'),
     path('images/', views.images, name='images'),
     path('tresD/', views.tresD, name='tresD'),
+    #path('comentario/<int:id >/approve', views.comment_aprove, name=comment_aprove),
+    #path('comentario/<int:id >/remove', views.comment_remove, name=comment_remove),
     ]
 
 if settings.DEBUG:
