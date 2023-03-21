@@ -10,8 +10,21 @@
 
 body{
     background-color: rgb(40 36 64);
+    color: #fff;
 }
 
+.contact{
+    margin: 2em;
+    padding: 2em;
+}
+
+.contact img{
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
 .custom-card-background{
     background-color: #441b37a6;
     color: #fff;
@@ -29,11 +42,10 @@ body{
 
 .logoiro img{
     height: 70px;
-    width: auto;
     transition: all 0.3s;
 }
 
-header .logoiro img:hover{
+.logoiro img:hover{
     transform: scale(1.2);
 }
 
@@ -44,7 +56,6 @@ header .logoiro img:hover{
 }
 
 header .navbar a{
-    font-size: 700;
     color: rgb(168, 196, 238);
     text-decoration: none;
 }
@@ -93,3 +104,25 @@ transform: scale(1.1);
     height: auto;
     transform: scale(1.01);
 }
+
+.icons img{
+    display: flexbox;
+    width: 3%;
+}
+
+footer{
+    background-color: #724572;
+}
+
+.container-fluid a{
+    text-decoration: none;
+}
+
+a.nav-link{
+    width: 6em;
+}
+/*
+.navbar-toggler-icon {
+    background-image: url('{% static '\galeria_app\images\toggler_icon_menu.png' %}');
+}
+*/

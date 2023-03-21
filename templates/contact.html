@@ -1,7 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block contenido %}
-
-<h1>Esta es la pagina de contacto</h1>
-<p>Aquí estará el correo, el celular y las redes</p>
-
+<div>
+    <div class="contact">
+        <img src="{% static '\galeria_app\images\contactphoto.jpg' %}" alt="Picture of Iro Nuñez">
+    
+    <h3>
+    Iro Nuñez - Artist, Designer and Programmer.
+    </h3>
+    <p>
+        <br>
+        Hello! I'm from Argentina. I'm passionate about art, design and programming.
+        I love to create visual solutions and technology that made people's life easier and beautiful.
+        I offer a wide range of services in art, design and programming, from illustration and graphic design to web and mobile development.
+        I can work with you to create custom solutions that fit your needs and expectations.
+    </p>
+    <p>
+        My work process is based on a close collaboration with my clients. I like to listen to your needs and expectations 
+        and work together to create effective and beautiful solutions. Also, I always make sure my clients are informed and 
+        satisfied at every stage of the process.<br>
+        Take a look at my portfolio to see some of my previous artworks. From illustrations and logos to websites and apps.
+    </p>
+    <p>
+        I'd love to work with you! If you have any questions or wish to discuss a project, do not hesitate to contact me.
+        I am available to discuss your needs and help you find the perfect solution for your project.
+    </p>
+    </div>
+</div>
 {% endblock %}
