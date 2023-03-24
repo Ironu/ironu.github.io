@@ -19,12 +19,12 @@ def sculpts(request):
     }
     return render(request, 'sculpts.html', data)
 
-def images(request):
+def illustrations(request):
     artworks = Artwork.objects.filter(categoria='2').order_by('fecha_de_creacion').reverse()
     data = {
         'artworks': artworks
     }
-    return render(request, 'images.html', data)
+    return render(request, 'illustrations.html', data)
 
 def tresD(request):
     artworks = Artwork.objects.filter(categoria='3').order_by('fecha_de_creacion').reverse()
@@ -39,5 +39,5 @@ def contact(request):
 def base(request):
     return render(request, 'base.html')
 
-def EP(request):
-    return render(request, 'EP.html')
+def mail(request):
+    return render(request, 'mail.html')

@@ -29,12 +29,12 @@
 
 
 
-            <nav class="navbar navbar-expand-lg" style="background-image: url('{% static '\galeria_app\images\logo.png' %}');">
+            <nav class="navbar navbar-expand-md" style="background-image: url('{% static '\galeria_app\images\logo.png' %}');">
                 <div class="container-fluid">
                     <a class="alogo" href="{% url 'index' %}"><img class="logoiro" src="{% static '\galeria_app\images\simple logo.png' %}" alt="logo"></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarsExample03">
                         <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                             <li class="nav-item">
@@ -44,7 +44,7 @@
                                 <a class="nav-link" href="{% url 'sculpts' %}">Sculpts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'images' %}">Illustrations</a>
+                                <a class="nav-link" href="{% url 'illustrations' %}">Illustrations</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'tresD' %}">3D</a>
@@ -62,25 +62,26 @@
 
         <footer>
             <nav class="footer">
-                <div class="container-fluid"> 
-                    Contact:
-                    <div class="icons">                   
-                        <a href="https://www.instagram.com/iro.nu/">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png" 
-                            alt="Instagram">
-                        </a>
-                        <a href="https://www.facebook.com/Almainfame/">
-                            <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" 
-                            alt="Facebook">
-                        </a>
-                        <a href="germass@gmail.com">
-                            <img src="https://cdn.worldvectorlogo.com/logos/gmail-icon-3.svg" 
-                            alt="Gmail">
-                        </a>
-                    </div>
+                <div class="imgfooter">                  
+                    <a href="{% url 'contact' %}">Contact:</a>
+                    <a href="https://www.instagram.com/iro.nu/">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png" 
+                        alt="Instagram">@iro.nu
+                    </a>
+                    <a href="https://www.facebook.com/Almainfame/">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" 
+                        alt="Facebook">/almainfame
+                    </a>
+                    <a href="germass93@gmail.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" 
+                        alt="Gmail">germass93@gmail.com
+                    </a>
+                    <a href="https://wa.me/+5491166450199">
+                        <img src="https://www.freepnglogos.com/uploads/whatsapp-png-image-9.png"
+                        alt="Whatsapp">+54 9 11 6645-0199
+                    </a>
                 </div>
             </nav>
-        </footer>
-        
+        </footer> 
     </body>
 </html>

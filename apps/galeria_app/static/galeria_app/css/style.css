@@ -13,18 +13,6 @@ body{
     color: #fff;
 }
 
-.contact{
-    margin: 2em;
-    padding: 2em;
-}
-
-.contact img{
-  display: block;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3em;
-}
 .custom-card-background{
     background-color: #441b37a6;
     color: #fff;
@@ -42,11 +30,14 @@ body{
 
 .logoiro img{
     height: 70px;
-    transition: all 0.3s;
 }
 
-.logoiro img:hover{
-    transform: scale(1.2);
+.alogo img{
+    transition: all 0.2s;
+}
+
+.alogo img:hover{
+    transform: scale(1.15);
 }
 
 .navbar{
@@ -58,11 +49,11 @@ body{
 header .navbar a{
     color: rgb(168, 196, 238);
     text-decoration: none;
+    text-align: center;
 }
 
 header .navbar li{
     display: inline-block;
-    padding: 0 20px;
 }
 
 header .navbar li a:hover{
@@ -74,10 +65,11 @@ transform: scale(1.1);
 }
 
 .logoiro{
-    width:50%
+    width:18em;
 }
 
 .img-thumbnail{
+    background-color: #7d4894;
     height: 20em;
     object-fit: cover;
     padding: 1px;
@@ -105,13 +97,11 @@ transform: scale(1.1);
     transform: scale(1.01);
 }
 
-.icons img{
-    display: flexbox;
-    width: 3%;
-}
+
 
 footer{
     background-color: #724572;
+    padding: 0.5rem;
 }
 
 .container-fluid a{
@@ -121,6 +111,47 @@ footer{
 a.nav-link{
     width: 6em;
 }
+
+.navbar-toggler{
+    background-color: #441b37;
+    border: var(--bs-border-width) solid rgb(137 91 122);
+    color: rgb(114 69 114);
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.contact{
+    margin: 2em;
+    padding: 2em;
+}
+
+.contact img{
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+.imgfooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imgfooter img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.imgfooter a {
+    text-decoration: none;
+    color: #ffff;
+}
+
 /*
 .navbar-toggler-icon {
     background-image: url('{% static '\galeria_app\images\toggler_icon_menu.png' %}');

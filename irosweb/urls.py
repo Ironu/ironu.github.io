@@ -26,9 +26,9 @@ urlpatterns = [
     path('sculpts/', views.sculpts, name='sculpts'),
     path('contact/', views.contact, name='contact'),
     path('base', views.base, name='base'),
-    path('EP/', views.EP, name='EP'),
-    path('images/', views.images, name='images'),
+    path('illustrations/', views.illustrations, name='illustrations'),
     path('tresD/', views.tresD, name='tresD'),
+    path('mail/', views.mail, name='mail'),
     #path('comentario/<int:id >/approve', views.comment_aprove, name=comment_aprove),
     #path('comentario/<int:id >/remove', views.comment_remove, name=comment_remove),
     ]
