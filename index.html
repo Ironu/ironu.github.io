@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/galeria_app/css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+
+{% block contenido %}
+
+<!--Aquí se deberia mostrar las nuevas entradas de la base de datos -->
+
+<div class="contenido">
+    <h1 class="text-light">Latest Artworks:</h1>
+    <div class="row">
+        {% for p in artworks %}
+        <div class="cols col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="card custom-card-background">
+                {% if p.img %}
+                <img src="{{ p.img.url }}" class="img-thumbnail" alt="{{ p.img }}" class="fancybox">
+                <div class="card-body">
+                    <h5 class="card-title"><b>{{ p.titulo | capfirst }}</b></h5>
+                    <p class="card-text">{{ p.categoria }}</p>
+                    <p class="card-text">{{ p.texto }}</p>
+                    {% endif %}
+                    {% if p.video %}
+                    <video class="embed-responsive-item" src="{{ p.video.url }}" controls></video>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{ p.titulo | capfirst }}</b></h5>
+                        <p class="card-text">{{ p.categoria }}</p>
+                        <p class="card-text">{{ p.texto }}</p>
+                    <div class="cols col-xl-3 col-lg-4 col-sm-12">
+                        <div class="embed-responsive embed-responsive-16by9">
+                        </div>
+                        <!--
+                        <a href="{{ p.video.url }}" type="button" class="btn btn-primary" alt="{{ p.video }}" class="fancybox">ver video</a>
+                        -->
+                    </div>
+                    {% endif %}
+                    <!--
+                <a href="#" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="{{ p.img }}">Ampliar imagen</a>
+                -->
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Título del modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!--<div class="contenido">
+    <h1 class="text-light">Latest Artwork:</h1>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for p in artworks %}
+        <div class="col-3">
+            <div class="card custom-card-background">
+                {% if p.img %}
+                <img src="{{ p.img.url }}" class="img-thumbnail" alt="{{ p.img }}">
+                {% endif %}
+                <div class="card-body">
+                <h5 class="card-title">{{ p.titulo | capfirst }}</h5>
+                <p class="card-text">{{ p.categoria }}</p>
+                <p class="card-text">{{ p.texto |title }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+-->

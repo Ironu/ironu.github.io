@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+    <div class= "post">
+
+        <div class="contenido">
+            <h1 class="text-light">Latest illustrations:</h1>
+            
+            <div class="row">
+                {% for p in artworks %}
+                <div class="cols col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card custom-card-background">
+                        {% if p.img %}
+                        <img src="{{ p.img.url }}" class="img-thumbnail" alt="{{ p.img }}" class="fancybox">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>{{ p.titulo | capfirst }}</b></h5>
+                            <p class="card-text">{{ p.categoria }}</p>
+                            <p class="card-text">{{ p.texto }}</p>
+                            {% endif %}
+                            {% if p.video %}
+                            <video class="embed-responsive-item" src="{{ p.video.url }}" controls></video>
+                            <div class="card-body">
+                                <h5 class="card-title"><b>{{ p.titulo | capfirst }}</b></h5>
+                                <p class="card-text">{{ p.categoria }}</p>
+                                <p class="card-text">{{ p.texto }}</p>
+                            <div class="cols col-xl-3 col-lg-4 col-sm-12">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                </div>
+                                <!--
+                                <a href="{{ p.video.url }}" type="button" class="btn btn-primary" alt="{{ p.video }}" class="fancybox">ver video</a>
+                                -->
+                            </div>
+                            {% endif %}
+                            <!--
+                        <a href="#" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="{{ p.img }}">Ampliar imagen</a>
+                        -->
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

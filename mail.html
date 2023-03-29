@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<form method="post">
+    <input type="text" placeholder="name" name="name">
+    <input type="email" placeholder="email" name="email">
+    <input type="text" placeholder="subject" name="subject">
+    <textarea placeholder="message" name="message"></textarea>
+    <input type="submit">
+</form>
+<?php
+include("correo.php");
+?>
+
+{% endblock %}
