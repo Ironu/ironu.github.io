@@ -68,7 +68,7 @@ TEMPLATE_REGISTRATION = os.path.join(os.path.dirname(BASE_DIR),'templates/regist
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR), 'templates')],
+        'DIRS': [os.path.join(os.path.dirname(BASE_DIR))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
